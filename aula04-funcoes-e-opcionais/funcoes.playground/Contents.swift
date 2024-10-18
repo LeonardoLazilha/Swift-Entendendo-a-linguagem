@@ -39,3 +39,17 @@ verificaAdulto(22)
 //retorna false
 verificaAdulto(17)
 
+<<<<<<< HEAD
+=======
+
+
+// funcoes com parametros in-out
+
+func somaNumero(_ numero: inout Int) {
+    numero += 1
+    print(numero)
+}
+var valor = 10
+somaNumero(&valor)
+print(valor) // resultado: 11
+>>>>>>> 4e12f75 (func)
