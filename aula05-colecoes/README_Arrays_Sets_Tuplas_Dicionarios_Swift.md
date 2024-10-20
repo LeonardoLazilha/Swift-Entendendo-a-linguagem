@@ -1,5 +1,5 @@
 
-# Operações com Arrays, Sets e Tuplas em Swift
+# Operações com Arrays, Sets, Tuplas e Dicionários em Swift
 
 ## Operações com Arrays
 
@@ -163,3 +163,63 @@ print(pessoa.idade)  // 21
 var (_, idade) = pessoa
 print(idade)  // 21
 ```
+
+## Trabalhando com Dicionários
+
+### O que é um Dicionário?
+Um **dicionário** é uma coleção não ordenada que armazena pares chave-valor, onde cada valor é associado a uma chave única.
+
+### Exemplo de Dicionário:
+
+```swift
+var pontuacao = [
+    "LeoLazi" : 7,
+    "JSilva": 3,
+    "MariaSV": 6
+]
+```
+
+### Operações com Dicionários:
+
+- Acessar o valor de uma chave:
+```swift
+print(pontuacao["LeoLazi"]) // Retorna um optional
+```
+
+- Verificar se o dicionário está vazio:
+```swift
+pontuacao.isEmpty
+```
+
+- Contar quantos pares chave-valor existem no dicionário:
+```swift
+pontuacao.count
+```
+
+- Adicionar ou atualizar valores no dicionário:
+```swift
+pontuacao["AnaC"] = 30  // Adiciona um novo par chave-valor
+pontuacao["LeoLazi"] = 100  // Atualiza o valor existente
+```
+
+- Usar o método `updateValue` para adicionar ou atualizar:
+```swift
+pontuacao.updateValue(200, forKey: "LeoLazi")  // Atualiza
+pontuacao.updateValue(80, forKey: "PSilva")  // Adiciona se não existir
+```
+
+- Remover um valor:
+```swift
+pontuacao.removeValue(forKey: "PSilva")
+```
+
+### Iterar sobre um Dicionário:
+
+Você pode percorrer os pares chave-valor de um dicionário:
+
+```swift
+for (nome, valor) in pontuacao {
+    print("O user \(nome) tem pontuacao \(valor).")
+}
+```
+
